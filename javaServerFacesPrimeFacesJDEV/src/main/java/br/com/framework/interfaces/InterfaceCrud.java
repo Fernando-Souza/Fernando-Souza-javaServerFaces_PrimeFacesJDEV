@@ -31,7 +31,7 @@ public interface InterfaceCrud<T> extends Serializable {
 //	Retira objeto da sessão do hibernate
 	void evict(T obj)throws Exception;
 	Session getSession()throws Exception;
-	List<?> getListSQL(String sql)throws Exception;
+	List<?> findListBySQL(String sql)throws Exception;
 //	JDBC do Spring
 	JdbcTemplate getJdbcTemplate();
 	SimpleJdbcTemplate getSimpleJdbcTemplate();
@@ -42,5 +42,6 @@ public interface InterfaceCrud<T> extends Serializable {
 	Query obterQuery(String query)throws Exception;
 //	Filtra a lista pelo index inicial e final
 	List<T> findListByQuery(String query, int inicioIndex,int finalIndex)throws Exception;
+	List<Object[]> findListArrayBySQL(String sql) throws Exception;
 
 }
