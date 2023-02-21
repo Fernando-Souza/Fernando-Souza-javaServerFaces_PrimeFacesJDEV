@@ -33,7 +33,7 @@ public class HibernateUtil implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private static ConexaoUtil conexaoDataSource = ConexaoUtil.JAVA_COMP_ENV_JDBC_DATA_SOURCE;
+	private static ConexaoUtil conexaoDataSource = ConexaoUtil.DATA_SOURCE;
 	private static SessionFactory sessionFactory = buildSessionFactory();
 
 	/**
